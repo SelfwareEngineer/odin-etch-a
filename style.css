@@ -3,6 +3,11 @@ body {
 }
 
 #content {
+  width: 20em;
+  margin: auto;
+}
+
+#gridContainer {
   background-color: #1f2937;
   display: flex;
   flex-wrap: wrap;
@@ -16,4 +21,13 @@ body {
 .gridSquare {
   background-color: #9dbbe9;
   flex: none;
+}
+
+#changeGridSize {
+  margin: 2em 0;
+  background-color: #374151;
+  color: white;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
 }
