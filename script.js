@@ -42,5 +42,10 @@ document.addEventListener("click", (e) => {
     }
 
     createGrid(newGridSize);
+  } else if (e.target.id === "clearGrid") {
+    allGridSquares = document.querySelectorAll(".gridSquare");
+    allGridSquares.forEach((i) => {
+      i.style.backgroundColor = "#9dbbe9";
+    });
   }
 });

@@ -23,11 +23,15 @@ body {
   flex: none;
 }
 
-#changeGridSize {
+.btn {
   margin: 2em 0;
   background-color: #374151;
   color: white;
   padding: 1em;
   border: none;
   border-radius: 8px;
+}
+
+#clearGrid {
+  margin-right: 0.5em;
 }
