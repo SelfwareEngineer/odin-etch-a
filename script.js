@@ -23,6 +23,8 @@ function getNewGridSize(prompt_msg = "Enter a new grid size (max 100)") {
     newGridSize = getNewGridSize("Please enter a number.");
   } else if (newGridSize > 100) {
     newGridSize = getNewGridSize("Please enter a number less than 100");
+  } else if (newGridSize < 1) {
+    newGridSize = null;
   }
   return newGridSize;
 }
@@ -36,6 +38,9 @@ document.addEventListener("mouseover", (e) => {
 document.addEventListener("click", (e) => {
   if (e.target.id === "changeGridSize") {
     const newGridSize = getNewGridSize();
+
+    // Avoids user getting stuck in the prompt if they cancel or enter 0
+    if (!newGridSize) return;
 
     while (gridContainer.lastChild) {
       gridContainer.removeChild(gridContainer.lastChild);
