@@ -12,3 +12,9 @@ function createGrid(gridSize) {
     content.appendChild(gridSquare);
   }
 }
+
+document.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("gridSquare")) {
+    e.target.style.backgroundColor = "black";
+  }
+});
